@@ -1,0 +1,176 @@
+{
+    "management": {
+        "announcements": {
+            "totalAnnouncementsThisYear": 34,
+            "totalMeetingsCalledThisYear": 12
+        },
+        "unitsAndUsers": {
+            "uniqueUsers": 218,
+            "totalUnits": 240,
+            "breakdown": {
+                "admins": 5,
+                "usersNotLoggedIn": 42,
+                "activeUsers": 171,
+                "pendingVerification": 2
+            }
+        },
+        "helpdesk": {
+            "complaints": {
+                "personal": {
+                    "total": 38,
+                    "highPriority": {
+                        "pending": 3,
+                        "inProgress": 2
+                    },
+                    "pending": 11,
+                    "inProgress": 7,
+                    "resolved": 20
+                },
+                "openArea": {
+                    "total": 22,
+                    "highPriority": {
+                        "pending": 1,
+                        "inProgress": 1
+                    },
+                    "pending": 5,
+                    "inProgress": 4,
+                    "resolved": 13
+                }
+            },
+            "documentRequests": {
+                "active": 8,
+                "pending": 5
+            }
+        },
+        "amenitiesAndHallBookings": {
+            "totalAmenities": 6,
+            "totalBookingsThisMonth": 47,
+            "pendingHallBookingRequests": 3,
+            "hallBookingsPendingDetails": [
+                {
+                    "id": 101,
+                    "hallName": "Community Hall A",
+                    "requestedBy": "Flat 402 - R. Sharma",
+                    "date": "2026-05-08",
+                    "status": "Pending Acceptance"
+                },
+                {
+                    "id": 102,
+                    "hallName": "Terrace Garden",
+                    "requestedBy": "Flat 112 - S. Patel",
+                    "date": "2026-05-10",
+                    "status": "Pending Acceptance"
+                },
+                {
+                    "id": 103,
+                    "hallName": "Community Hall B",
+                    "requestedBy": "Flat 305 - A. Iyer",
+                    "date": "2026-05-15",
+                    "status": "Pending Acceptance"
+                }
+            ]
+        }
+    },
+    "accounts": {
+        "incomeTracker": {
+            "totalBillsGeneratedThisYear": 1440,
+            "totalAmountGenerated": 8640000,
+            "totalAmountCollected": 6912000,
+            "totalAmountBalance": 1728000,
+            "quarterlyData": [
+                {
+                    "quarter": "Q1 (Apr–Jun)",
+                    "billsCreated": 480,
+                    "amountGenerated": 2880000,
+                    "amountCollected": 2534400
+                },
+                {
+                    "quarter": "Q2 (Jul–Sep)",
+                    "billsCreated": 360,
+                    "amountGenerated": 2160000,
+                    "amountCollected": 1814400
+                },
+                {
+                    "quarter": "Q3 (Oct–Dec)",
+                    "billsCreated": 360,
+                    "amountGenerated": 2160000,
+                    "amountCollected": 1728000
+                },
+                {
+                    "quarter": "Q4 (Jan–Mar)",
+                    "billsCreated": 240,
+                    "amountGenerated": 1440000,
+                    "amountCollected": 835200
+                }
+            ]
+        },
+        "expenseTracker": {
+            "quarterlyExpenses": [
+                {
+                    "quarter": "Q1 (Apr–Jun)",
+                    "amount": 425000
+                },
+                {
+                    "quarter": "Q2 (Jul–Sep)",
+                    "amount": 312000
+                },
+                {
+                    "quarter": "Q3 (Oct–Dec)",
+                    "amount": 538000
+                },
+                {
+                    "quarter": "Q4 (Jan–Mar)",
+                    "amount": 287000
+                }
+            ],
+            "totalExpensesThisYear": 1562000
+        },
+        "bankAndCash": {
+            "totalAmount": 3248750,
+            "accounts": [
+                {
+                    "name": "HDFC Savings A/C",
+                    "type": "bank",
+                    "accountNumber": "XXXX-4892",
+                    "balance": 1850000
+                },
+                {
+                    "name": "SBI Current A/C",
+                    "type": "bank",
+                    "accountNumber": "XXXX-2301",
+                    "balance": 980000
+                },
+                {
+                    "name": "ICICI FD A/C",
+                    "type": "bank",
+                    "accountNumber": "XXXX-7745",
+                    "balance": 300000
+                },
+                {
+                    "name": "Petty Cash",
+                    "type": "cash",
+                    "accountNumber": null,
+                    "balance": 118750
+                }
+            ]
+        },
+        "duesTracker": {
+            "totalDefaulters": 28,
+            "totalAmountDue": 672000
+        }
+    },
+    "gatekeeper": {
+        "dailyVisitors": {
+            "totalIn": 63,
+            "stillInside": 14
+        },
+        "staffMembers": {
+            "totalIn": 22,
+            "stillInside": 18
+        },
+        "alerts": {
+            "panicAlertsThisMonth": 2,
+            "missingVisitorsThisMonth": 1
+        }
+    }
+}

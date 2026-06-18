@@ -1,0 +1,30 @@
+{
+    "name": "root",
+    "version": "1.0.0",
+    "private": true,
+    "scripts": {
+        "build": "npm run build:frontend && npm run build:backend",
+        "build:frontend": "npm run build --prefix frontend",
+        "build:backend": "npm run build --prefix backend",
+        "build:all": "npm run build:frontend && npm run build:backend",
+        "typecheck": "npm run typecheck --prefix backend && npm run typecheck --prefix frontend",
+        "lint": "eslint \"frontend/src/**/*.{ts,tsx}\" \"backend/src/**/*.ts\"",
+        "format": "prettier --write \"frontend/src/**/*.{ts,tsx}\" \"backend/src/**/*.ts\"",
+        "test": "vitest run --pool=forks"
+    },
+    "devDependencies": {
+        "@types/bcryptjs": "^2.4.6",
+        "@types/pg": "^8.11.10",
+        "@typescript-eslint/eslint-plugin": "^8.22.0",
+        "@typescript-eslint/parser": "^8.22.0",
+        "axios": "^1.7.9",
+        "bcryptjs": "^2.4.3",
+        "eslint": "^9.19.0",
+        "jose": "^6.0.11",
+        "pg": "^8.13.1",
+        "prettier": "^3.0.0",
+        "typescript": "^5.7.2",
+        "typescript-eslint": "^8.61.0",
+        "vitest": "^2.0.0"
+    }
+}

@@ -1,0 +1,10 @@
+node_modules/
+*.log
+.env
+.DS_Store
+dist/
+coverage/
+
+# Temporary debug / scratch files
+backend/src/test-imports.ts
+backend/src/my-secret-key.json

@@ -1,0 +1,4 @@
+/node_modules
+/logs
+/dist
+/src/my-secret-key.json

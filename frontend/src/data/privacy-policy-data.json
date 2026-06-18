@@ -1,0 +1,237 @@
+{
+    "title": "WorkZapp Privacy Policy",
+    "lastUpdated": "2025-05-15",
+    "description": "This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our platform.",
+    "sections": [
+        {
+            "title": "Information We Collect",
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "We collect several types of information from and about users of our platform:"
+                },
+                {
+                    "type": "unordered-list",
+                    "items": [
+                        {
+                            "text": "Personal Identification Information",
+                            "subitems": [
+                                "Name",
+                                "Email address",
+                                "Phone number",
+                                "Resume/CV details",
+                                "Work history"
+                            ]
+                        },
+                        {
+                            "text": "Professional Information",
+                            "subitems": [
+                                "Skills and qualifications",
+                                "Education history",
+                                "Certifications",
+                                "Salary expectations"
+                            ]
+                        },
+                        {
+                            "text": "Technical Data",
+                            "subitems": [
+                                "IP address",
+                                "Browser type",
+                                "Device information",
+                                "Usage data"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "How We Use Your Information",
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "We use the information we collect for various purposes:"
+                },
+                {
+                    "type": "ordered-list",
+                    "items": [
+                        "To provide and maintain our service",
+                        "To notify you about job opportunities",
+                        "To improve our platform and services",
+                        {
+                            "text": "For communication purposes",
+                            "subitems": [
+                                "Respond to your inquiries",
+                                "Send service-related notices",
+                                "Provide customer support"
+                            ]
+                        },
+                        "To prevent fraud and ensure security"
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Data Sharing and Disclosure",
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "We may share your information in the following situations:"
+                },
+                {
+                    "type": "unordered-list",
+                    "items": [
+                        {
+                            "text": "With Employers",
+                            "subitems": [
+                                "When you apply for jobs",
+                                "When employers search for candidates"
+                            ]
+                        },
+                        "With service providers who assist us",
+                        "For legal compliance and protection",
+                        "During business transfers or mergers"
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Data Security",
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "We implement appropriate security measures including:"
+                },
+                {
+                    "type": "ordered-list",
+                    "items": [
+                        "Encryption of sensitive data",
+                        "Regular security audits",
+                        "Access controls",
+                        "Secure data storage"
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "However, no internet transmission is 100% secure. We cannot guarantee absolute security."
+                }
+            ]
+        },
+        {
+            "title": "Your Data Rights",
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "You have certain rights regarding your personal data:"
+                },
+                {
+                    "type": "unordered-list",
+                    "items": [
+                        "Access and request copies of your data",
+                        "Request correction of inaccurate data",
+                        "Request deletion of your data",
+                        "Object to certain processing",
+                        "Request restriction of processing",
+                        "Withdraw consent where applicable"
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Cookies and Tracking",
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "We use cookies and similar tracking technologies to:"
+                },
+                {
+                    "type": "ordered-list",
+                    "items": [
+                        "Authenticate users",
+                        "Remember user preferences",
+                        "Analyze usage patterns",
+                        "Deliver targeted job recommendations"
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "You can control cookies through your browser settings."
+                }
+            ]
+        },
+        {
+            "title": "Third-Party Services",
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "We may use third-party services that collect information:"
+                },
+                {
+                    "type": "unordered-list",
+                    "items": [
+                        "Analytics providers (Google Analytics)",
+                        "Payment processors",
+                        "Cloud storage providers",
+                        "Marketing platforms"
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "International Data Transfers",
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Your information may be transferred to and maintained on computers located outside your country where data protection laws may differ."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "We ensure appropriate safeguards are in place for such transfers."
+                }
+            ]
+        },
+        {
+            "title": "Children's Privacy",
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Our service is not intended for users under 18. We do not knowingly collect personal information from children."
+                }
+            ]
+        },
+        {
+            "title": "Policy Changes",
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "We may update this policy periodically. We will notify you of significant changes by:"
+                },
+                {
+                    "type": "unordered-list",
+                    "items": [
+                        "Email notification",
+                        "Notice on our website",
+                        "Through the platform dashboard"
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Contact Us",
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "For questions about this privacy policy:"
+                },
+                {
+                    "type": "unordered-list",
+                    "items": [
+                        "Email: info@workzapp.com",
+                        "Address: Kedar Gruhasankul, E05 1301, Sector 20, Kharghar, Navi Mumbai, Maharashtra 410208",
+                        "Phone: +91 99678 81724"
+                    ]
+                }
+            ]
+        }
+    ]
+}

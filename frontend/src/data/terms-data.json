@@ -1,0 +1,228 @@
+{
+    "title": "WorkZapp Terms of Service",
+    "lastUpdated": "2025-05-15",
+    "sections": [
+        {
+            "title": "Introduction",
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Welcome to WorkZapp! These Terms of Service ('Terms') govern your use of our platform that connects job seekers with employers offering jobs, internships, and freelance opportunities ('Services')."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "By accessing or using our Services, you agree to be bound by these Terms. If you disagree with any part, you may not access the Services."
+                }
+            ]
+        },
+        {
+            "title": "Eligibility",
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "To use our Services, you must:"
+                },
+                {
+                    "type": "ordered-list",
+                    "items": [
+                        "Be at least 14 years of age",
+                        "Have the legal capacity to enter into contracts",
+                        "Provide accurate and complete information"
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Prohibited users include:"
+                },
+                {
+                    "type": "unordered-list",
+                    "items": [
+                        "Individuals restricted by applicable laws",
+                        "Former users banned for violations",
+                        "Automated bots or scrapers"
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "User Accounts",
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "When creating an account, you agree to:"
+                },
+                {
+                    "type": "ordered-list",
+                    "items": [
+                        "Provide accurate current information",
+                        "Maintain security of your credentials",
+                        "Promptly update any changes",
+                        {
+                            "text": "Accept responsibility for all activities",
+                            "subitems": [
+                                "You're responsible for all activities under your account",
+                                "Notify us immediately of unauthorized use",
+                                "We may suspend accounts with suspicious activity"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Job Listings",
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "For Employers posting jobs:"
+                },
+                {
+                    "type": "unordered-list",
+                    "items": [
+                        "All listings must be for genuine opportunities",
+                        "Compensation details must be accurate",
+                        "Discrimination based on protected characteristics is prohibited",
+                        {
+                            "text": "Compliance with all applicable laws",
+                            "subitems": [
+                                "Labor laws",
+                                "Immigration laws",
+                                "Tax regulations"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Privacy",
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Your privacy is important to us. Please review our Privacy Policy which explains how we collect, use, and protect your information."
+                }
+            ]
+        },
+        {
+            "title": "Prohibited Conduct",
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "You agree not to engage in:"
+                },
+                {
+                    "type": "unordered-list",
+                    "items": [
+                        "Posting false or misleading information",
+                        "Harassing other users",
+                        "Reverse engineering our platform",
+                        "Circumventing access restrictions",
+                        {
+                            "text": "Violating intellectual property rights",
+                            "subitems": [
+                                "Copyright infringement",
+                                "Trademark violations",
+                                "Patent violations"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Termination",
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "We may terminate or suspend your account:"
+                },
+                {
+                    "type": "ordered-list",
+                    "items": [
+                        "Immediately for violations of these Terms",
+                        "After 30 days notice without cause",
+                        "If we discontinue the Services"
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Disclaimers",
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "WorkZapp disclaims:"
+                },
+                {
+                    "type": "unordered-list",
+                    "items": [
+                        "Warranties about job suitability",
+                        "Responsibility for employer conduct",
+                        "Guarantees about response times",
+                        "Liability for technical issues"
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Limitation of Liability",
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "To the maximum extent permitted by law:"
+                },
+                {
+                    "type": "ordered-list",
+                    "items": [
+                        "We won't be liable for indirect damages",
+                        "Our total liability is limited to fees paid",
+                        "Some jurisdictions don't allow these limitations"
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Governing Law",
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "These Terms are governed by the laws of India, without regard to conflict of law principles."
+                }
+            ]
+        },
+        {
+            "title": "Changes to Terms",
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "We may modify these Terms at any time. We'll notify you of significant changes through:"
+                },
+                {
+                    "type": "unordered-list",
+                    "items": [
+                        "Email to registered users",
+                        "Notice on our platform",
+                        "Updated 'last updated' date"
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Contact Us",
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "For questions about these Terms, contact us at:"
+                },
+                {
+                    "type": "unordered-list",
+                    "items": [
+                        "Email: info@workzapp.com",
+                        "Address: Kedar Gruhasankul, E05 1301, Sector 20, Kharghar, Navi Mumbai, Maharashtra 410208",
+                        "Phone: +91 99678 81724"
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Email Templates Preview</title>
+    <style>
+        body {
+            background: #f5f5f7;
+            margin: 0;
+            padding: 20px;
+            font-family: sans-serif;
+        }
+
+        .preview-section {
+            margin-bottom: 60px;
+            background: #fff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .preview-header {
+            background: #000;
+            color: #fff;
+            padding: 15px 25px;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .preview-content {
+            padding: 20px;
+            background: #eee;
+            display: flex;
+            justify-content: center;
+        }
+
+        iframe {
+            border: none;
+            width: 100%;
+            height: 800px;
+            background: #fff;
+            border-radius: 8px;
+        }
+
+        .sidebar {
+            position: fixed;
+            left: 20px;
+            top: 20px;
+            width: 250px;
+            background: #fff;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .sidebar a {
+            display: block;
+            padding: 10px;
+            color: #333;
+            text-decoration: none;
+            border-radius: 6px;
+            margin-bottom: 5px;
+            font-size: 14px;
+        }
+
+        .sidebar a:hover {
+            background: #f0f0f0;
+        }
+
+        .main-content {
+            margin-left: 300px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="sidebar">
+        <h3 style="margin-top:0">Templates</h3>
+        <a href="#template-0">1. Create Company Verification</a><a href="#template-1">2. General OTP</a><a
+            href="#template-2">3. New Device Login</a><a href="#template-3">4. Reset Password</a><a
+            href="#template-4">5. Bill Generated</a><a href="#template-5">6. Welcome to Conversational AI</a><a
+            href="#template-6">7. Onboarding Status</a>
+    </div>
+    <div class="main-content">
+        <div
+            style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px; border-bottom: 1px solid #eee; padding-bottom: 16px;">
+            <h1 style="margin:0">Email Templates Preview</h1>
+            <div style="font-size: 12px; color: #666; background: #f0f0f0; padding: 4px 12px; border-radius: 12px;">
+                Last Updated: 5/14/2026, 8:33:42 PM
+            </div>
+        </div>
+
+        <div id="template-0" class="preview-section">
+            <div class="preview-header">1. Create Company Verification</div>
+            <div class="preview-content">
+                <iframe srcdoc="
+    <!DOCTYPE html>
+    <html>
+    <head><style>
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; line-height: 1.5; color: #18181b; margin: 0; padding: 0; background-color: #f4f4f5; -webkit-font-smoothing: antialiased; }
+    .wrapper { padding: 32px 16px; }
+    .container { max-width: 380px; margin: 0 auto; padding: 24px; border-radius: 12px; background-color: #ffffff; border: 1px solid #e4e4e7; box-shadow: 0 4px 12px rgba(0,0,0,0.03); }
+    .header { margin-bottom: 24px; display: table; width: 100%; }
+    .logo { display: table-cell; font-size: 15px; font-weight: 700; color: #09090b; letter-spacing: -0.5px; vertical-align: middle; text-transform: uppercase; }
+    .badge-wrap { display: table-cell; text-align: right; vertical-align: middle; }
+    .badge { padding: 4px 8px; background-color: #f4f4f5; color: #52525b; border-radius: 4px; font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; }
+    .title { font-size: 18px; font-weight: 600; color: #09090b; margin: 0 0 6px 0; letter-spacing: -0.5px; }
+    .text { font-size: 13px; color: #52525b; margin-bottom: 20px; line-height: 1.5; }
+    .otp-box { background: #fafafa; border-radius: 8px; padding: 16px; text-align: center; margin-bottom: 20px; border: 1px dashed #d4d4d8; }
+    .otp-code { font-size: 24px; font-weight: 600; color: #09090b; letter-spacing: 6px; font-family: 'SF Mono', 'Roboto Mono', monospace; white-space: nowrap; margin-left: 6px; }
+    .validity { font-size: 11px; color: #71717a; margin-top: 6px; font-weight: 500; }
+    .button { display: block; box-sizing: border-box; padding: 12px 20px; background-color: #09090b; color: #ffffff !important; text-decoration: none; border-radius: 8px; font-weight: 500; font-size: 13px; text-align: center; margin-top: 8px; }
+    .info-box { background: #fafafa; border: 1px solid #e4e4e7; border-radius: 8px; padding: 16px; margin-bottom: 20px; }
+    .info-row { display: table; width: 100%; margin-bottom: 8px; font-size: 12px; }
+    .info-row:last-child { margin-bottom: 0; }
+    .info-label { display: table-cell; color: #71717a; text-align: left; }
+    .info-value { display: table-cell; color: #18181b; font-weight: 500; text-align: right; }
+    .footer { 
+        margin-top: 16px; 
+        padding: 40px 32px; 
+        background-color: #f9fafb; 
+        border-radius: 24px; 
+        text-align: center; 
+    }
+    .footer-text { font-size: 11px; color: #6b7280; margin: 0; line-height: 1.6; }
+    .footer-link { color: #111827; text-decoration: none; font-weight: 700; font-size: 11px; }
+</style></head>
+    <body>
+        <div class=&quot;wrapper&quot;>
+            <div class=&quot;container&quot;>
+                <div class=&quot;header&quot;>
+                    <div class=&quot;logo&quot;>Conversational AI</div>
+                    <div class=&quot;badge-wrap&quot;><span class=&quot;badge&quot;>Verification</span></div>
+                </div>
+                <h1 class=&quot;title&quot;>Verify email</h1>
+                <p class=&quot;text&quot;>Use the authorization code below to finalize your society registration.</p>
+                <div class=&quot;otp-box&quot;>
+                    <div class=&quot;otp-code&quot;>123456</div>
+                    <div class=&quot;validity&quot;>Valid for 10 minutes</div>
+                </div>
+                
+    <div class=&quot;footer&quot;>
+        <p class=&quot;footer-text&quot; style=&quot;margin-bottom: 24px;&quot;>
+            Valueye Technologies
+        </p>
+        <p class=&quot;footer-text&quot; style=&quot;margin-bottom: 8px;&quot;>
+            To update your communication settings or to unsubscribe, use the links below.
+        </p>
+        <p class=&quot;footer-text&quot; style=&quot;margin-bottom: 24px;&quot;>
+            <a href=&quot;https://societyadmin.valueye.in/dashboard/preferences?subscribe=true&quot; class=&quot;footer-link&quot;>Manage Preferences</a>
+            &nbsp;|&nbsp;
+            <a href=&quot;https://societyadmin.valueye.in/dashboard/preferences?subscribe=false&quot; class=&quot;footer-link&quot;>Unsubscribe</a>
+        </p>
+        <p class=&quot;footer-text&quot; style=&quot;color: #9ca3af; font-size: 10px;&quot;>
+            &copy; 2026 Valueye Technologies. All rights reserved.
+        </p>
+    </div>
+
+            </div>
+        </div>
+    </body>
+    </html>
+" sandbox="allow-same-origin"></iframe>
+            </div>
+        </div>
+
+        <div id="template-1" class="preview-section">
+            <div class="preview-header">2. General OTP</div>
+            <div class="preview-content">
+                <iframe srcdoc="
+    <!DOCTYPE html>
+    <html>
+    <head><style>
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; line-height: 1.5; color: #18181b; margin: 0; padding: 0; background-color: #f4f4f5; -webkit-font-smoothing: antialiased; }
+    .wrapper { padding: 32px 16px; }
+    .container { max-width: 380px; margin: 0 auto; padding: 24px; border-radius: 12px; background-color: #ffffff; border: 1px solid #e4e4e7; box-shadow: 0 4px 12px rgba(0,0,0,0.03); }
+    .header { margin-bottom: 24px; display: table; width: 100%; }
+    .logo { display: table-cell; font-size: 15px; font-weight: 700; color: #09090b; letter-spacing: -0.5px; vertical-align: middle; text-transform: uppercase; }
+    .badge-wrap { display: table-cell; text-align: right; vertical-align: middle; }
+    .badge { padding: 4px 8px; background-color: #f4f4f5; color: #52525b; border-radius: 4px; font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; }
+    .title { font-size: 18px; font-weight: 600; color: #09090b; margin: 0 0 6px 0; letter-spacing: -0.5px; }
+    .text { font-size: 13px; color: #52525b; margin-bottom: 20px; line-height: 1.5; }
+    .otp-box { background: #fafafa; border-radius: 8px; padding: 16px; text-align: center; margin-bottom: 20px; border: 1px dashed #d4d4d8; }
+    .otp-code { font-size: 24px; font-weight: 600; color: #09090b; letter-spacing: 6px; font-family: 'SF Mono', 'Roboto Mono', monospace; white-space: nowrap; margin-left: 6px; }
+    .validity { font-size: 11px; color: #71717a; margin-top: 6px; font-weight: 500; }
+    .button { display: block; box-sizing: border-box; padding: 12px 20px; background-color: #09090b; color: #ffffff !important; text-decoration: none; border-radius: 8px; font-weight: 500; font-size: 13px; text-align: center; margin-top: 8px; }
+    .info-box { background: #fafafa; border: 1px solid #e4e4e7; border-radius: 8px; padding: 16px; margin-bottom: 20px; }
+    .info-row { display: table; width: 100%; margin-bottom: 8px; font-size: 12px; }
+    .info-row:last-child { margin-bottom: 0; }
+    .info-label { display: table-cell; color: #71717a; text-align: left; }
+    .info-value { display: table-cell; color: #18181b; font-weight: 500; text-align: right; }
+    .footer { 
+        margin-top: 16px; 
+        padding: 40px 32px; 
+        background-color: #f9fafb; 
+        border-radius: 24px; 
+        text-align: center; 
+    }
+    .footer-text { font-size: 11px; color: #6b7280; margin: 0; line-height: 1.6; }
+    .footer-link { color: #111827; text-decoration: none; font-weight: 700; font-size: 11px; }
+</style></head>
+    <body>
+        <div class=&quot;wrapper&quot;>
+            <div class=&quot;container&quot;>
+                <div class=&quot;header&quot;>
+                    <div class=&quot;logo&quot;>Conversational AI</div>
+                    <div class=&quot;badge-wrap&quot;><span class=&quot;badge&quot;>Auth</span></div>
+                </div>
+                <h1 class=&quot;title&quot;>Verification</h1>
+                <p class=&quot;text&quot;>Hi <strong>John Doe</strong>,<br>Use the code below for <strong>login</strong>.</p>
+                <div class=&quot;otp-box&quot;>
+                    <div class=&quot;otp-code&quot;>654321</div>
+                    <div class=&quot;validity&quot;>Expires in 10m</div>
+                </div>
+                
+    <div class=&quot;footer&quot;>
+        <p class=&quot;footer-text&quot; style=&quot;margin-bottom: 24px;&quot;>
+            Conversational AI
+        </p>
+        <p class=&quot;footer-text&quot; style=&quot;margin-bottom: 8px;&quot;>
+            To update your communication settings or to unsubscribe, use the links below.
+        </p>
+        <p class=&quot;footer-text&quot; style=&quot;margin-bottom: 24px;&quot;>
+            <a href=&quot;https://societyadmin.valueye.in/dashboard/preferences?subscribe=true&quot; class=&quot;footer-link&quot;>Manage Preferences</a>
+            &nbsp;|&nbsp;
+            <a href=&quot;https://societyadmin.valueye.in/dashboard/preferences?subscribe=false&quot; class=&quot;footer-link&quot;>Unsubscribe</a>
+        </p>
+        <p class=&quot;footer-text&quot; style=&quot;color: #9ca3af; font-size: 10px;&quot;>
+            &copy; 2026 Valueye Technologies. All rights reserved.
+        </p>
+    </div>
+
+            </div>
+        </div>
+    </body>
+    </html>
+" sandbox="allow-same-origin"></iframe>
+            </div>
+        </div>
+
+        <div id="template-2" class="preview-section">
+            <div class="preview-header">3. New Device Login</div>
+            <div class="preview-content">
+                <iframe srcdoc="
+    <!DOCTYPE html>
+    <html>
+    <head><style>
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; line-height: 1.5; color: #18181b; margin: 0; padding: 0; background-color: #f4f4f5; -webkit-font-smoothing: antialiased; }
+    .wrapper { padding: 32px 16px; }
+    .container { max-width: 380px; margin: 0 auto; padding: 24px; border-radius: 12px; background-color: #ffffff; border: 1px solid #e4e4e7; box-shadow: 0 4px 12px rgba(0,0,0,0.03); }
+    .header { margin-bottom: 24px; display: table; width: 100%; }
+    .logo { display: table-cell; font-size: 15px; font-weight: 700; color: #09090b; letter-spacing: -0.5px; vertical-align: middle; text-transform: uppercase; }
+    .badge-wrap { display: table-cell; text-align: right; vertical-align: middle; }
+    .badge { padding: 4px 8px; background-color: #f4f4f5; color: #52525b; border-radius: 4px; font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; }
+    .title { font-size: 18px; font-weight: 600; color: #09090b; margin: 0 0 6px 0; letter-spacing: -0.5px; }
+    .text { font-size: 13px; color: #52525b; margin-bottom: 20px; line-height: 1.5; }
+    .otp-box { background: #fafafa; border-radius: 8px; padding: 16px; text-align: center; margin-bottom: 20px; border: 1px dashed #d4d4d8; }
+    .otp-code { font-size: 24px; font-weight: 600; color: #09090b; letter-spacing: 6px; font-family: 'SF Mono', 'Roboto Mono', monospace; white-space: nowrap; margin-left: 6px; }
+    .validity { font-size: 11px; color: #71717a; margin-top: 6px; font-weight: 500; }
+    .button { display: block; box-sizing: border-box; padding: 12px 20px; background-color: #09090b; color: #ffffff !important; text-decoration: none; border-radius: 8px; font-weight: 500; font-size: 13px; text-align: center; margin-top: 8px; }
+    .info-box { background: #fafafa; border: 1px solid #e4e4e7; border-radius: 8px; padding: 16px; margin-bottom: 20px; }
+    .info-row { display: table; width: 100%; margin-bottom: 8px; font-size: 12px; }
+    .info-row:last-child { margin-bottom: 0; }
+    .info-label { display: table-cell; color: #71717a; text-align: left; }
+    .info-value { display: table-cell; color: #18181b; font-weight: 500; text-align: right; }
+    .footer { 
+        margin-top: 16px; 
+        padding: 40px 32px; 
+        background-color: #f9fafb; 
+        border-radius: 24px; 
+        text-align: center; 
+    }
+    .footer-text { font-size: 11px; color: #6b7280; margin: 0; line-height: 1.6; }
+    .footer-link { color: #111827; text-decoration: none; font-weight: 700; font-size: 11px; }
+</style></head>
+    <body>
+        <div class=&quot;wrapper&quot;>
+            <div class=&quot;container&quot;>
+                <div class=&quot;header&quot;>
+                    <div class=&quot;logo&quot;>Conversational AI</div>
+                    <div class=&quot;badge-wrap&quot;><span class=&quot;badge&quot; style=&quot;background:#fef2f2; color:#b91c1c;&quot;>Alert</span></div>
+                </div>
+                <h1 class=&quot;title&quot;>New Login Detected</h1>
+                <p class=&quot;text&quot;>Hi <strong>John Doe</strong>,<br>We noticed a login to your account from a new device.</p>
+                <div class=&quot;info-box&quot;>
+                    <div class=&quot;info-row&quot;><div class=&quot;info-label&quot;>Device</div><div class=&quot;info-value&quot;>Chrome on MacOS · Mumbai, India</div></div>
+                    <div class=&quot;info-row&quot;><div class=&quot;info-label&quot;>Time</div><div class=&quot;info-value&quot;>5/14/2026, 8:33:42 PM</div></div>
+                </div>
+                <p class=&quot;text&quot; style=&quot;font-size: 12px; margin-bottom: 24px;&quot;>If this was you, you can safely ignore this email.</p>
+                <a href=&quot;https://societyadmin.valueye.in/support&quot; class=&quot;button&quot;>Secure Account</a>
+                
+    <div class=&quot;footer&quot;>
+        <p class=&quot;footer-text&quot; style=&quot;margin-bottom: 24px;&quot;>
+            Conversational AI
+        </p>
+        <p class=&quot;footer-text&quot; style=&quot;margin-bottom: 8px;&quot;>
+            To update your communication settings or to unsubscribe, use the links below.
+        </p>
+        <p class=&quot;footer-text&quot; style=&quot;margin-bottom: 24px;&quot;>
+            <a href=&quot;https://societyadmin.valueye.in/dashboard/preferences?subscribe=true&quot; class=&quot;footer-link&quot;>Manage Preferences</a>
+            &nbsp;|&nbsp;
+            <a href=&quot;https://societyadmin.valueye.in/dashboard/preferences?subscribe=false&quot; class=&quot;footer-link&quot;>Unsubscribe</a>
+        </p>
+        <p class=&quot;footer-text&quot; style=&quot;color: #9ca3af; font-size: 10px;&quot;>
+            &copy; 2026 Valueye Technologies. All rights reserved.
+        </p>
+    </div>
+
+            </div>
+        </div>
+    </body>
+    </html>
+" sandbox="allow-same-origin"></iframe>
+            </div>
+        </div>
+
+        <div id="template-3" class="preview-section">
+            <div class="preview-header">4. Reset Password</div>
+            <div class="preview-content">
+                <iframe srcdoc="
+    <!DOCTYPE html>
+    <html>
+    <head><style>
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; line-height: 1.5; color: #18181b; margin: 0; padding: 0; background-color: #f4f4f5; -webkit-font-smoothing: antialiased; }
+    .wrapper { padding: 32px 16px; }
+    .container { max-width: 380px; margin: 0 auto; padding: 24px; border-radius: 12px; background-color: #ffffff; border: 1px solid #e4e4e7; box-shadow: 0 4px 12px rgba(0,0,0,0.03); }
+    .header { margin-bottom: 24px; display: table; width: 100%; }
+    .logo { display: table-cell; font-size: 15px; font-weight: 700; color: #09090b; letter-spacing: -0.5px; vertical-align: middle; text-transform: uppercase; }
+    .badge-wrap { display: table-cell; text-align: right; vertical-align: middle; }
+    .badge { padding: 4px 8px; background-color: #f4f4f5; color: #52525b; border-radius: 4px; font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; }
+    .title { font-size: 18px; font-weight: 600; color: #09090b; margin: 0 0 6px 0; letter-spacing: -0.5px; }
+    .text { font-size: 13px; color: #52525b; margin-bottom: 20px; line-height: 1.5; }
+    .otp-box { background: #fafafa; border-radius: 8px; padding: 16px; text-align: center; margin-bottom: 20px; border: 1px dashed #d4d4d8; }
+    .otp-code { font-size: 24px; font-weight: 600; color: #09090b; letter-spacing: 6px; font-family: 'SF Mono', 'Roboto Mono', monospace; white-space: nowrap; margin-left: 6px; }
+    .validity { font-size: 11px; color: #71717a; margin-top: 6px; font-weight: 500; }
+    .button { display: block; box-sizing: border-box; padding: 12px 20px; background-color: #09090b; color: #ffffff !important; text-decoration: none; border-radius: 8px; font-weight: 500; font-size: 13px; text-align: center; margin-top: 8px; }
+    .info-box { background: #fafafa; border: 1px solid #e4e4e7; border-radius: 8px; padding: 16px; margin-bottom: 20px; }
+    .info-row { display: table; width: 100%; margin-bottom: 8px; font-size: 12px; }
+    .info-row:last-child { margin-bottom: 0; }
+    .info-label { display: table-cell; color: #71717a; text-align: left; }
+    .info-value { display: table-cell; color: #18181b; font-weight: 500; text-align: right; }
+    .footer { 
+        margin-top: 16px; 
+        padding: 40px 32px; 
+        background-color: #f9fafb; 
+        border-radius: 24px; 
+        text-align: center; 
+    }
+    .footer-text { font-size: 11px; color: #6b7280; margin: 0; line-height: 1.6; }
+    .footer-link { color: #111827; text-decoration: none; font-weight: 700; font-size: 11px; }
+</style></head>
+    <body>
+        <div class=&quot;wrapper&quot;>
+            <div class=&quot;container&quot;>
+                <div class=&quot;header&quot;>
+                    <div class=&quot;logo&quot;>Conversational AI</div>
+                </div>
+                <h1 class=&quot;title&quot;>Reset Password</h1>
+                <p class=&quot;text&quot;>Hi <strong>John Doe</strong>,<br>Click the button below to choose a new password. This link expires in 15 minutes.</p>
+                <a href=&quot;https://conversational-ai.valueye.in/reset-password?token=xyz&quot; class=&quot;button&quot;>Reset Password</a>
+                
+    <div class=&quot;footer&quot;>
+        <p class=&quot;footer-text&quot; style=&quot;margin-bottom: 24px;&quot;>
+            Conversational AI
+        </p>
+        <p class=&quot;footer-text&quot; style=&quot;margin-bottom: 8px;&quot;>
+            To update your communication settings or to unsubscribe, use the links below.
+        </p>
+        <p class=&quot;footer-text&quot; style=&quot;margin-bottom: 24px;&quot;>
+            <a href=&quot;https://societyadmin.valueye.in/dashboard/preferences?subscribe=true&quot; class=&quot;footer-link&quot;>Manage Preferences</a>
+            &nbsp;|&nbsp;
+            <a href=&quot;https://societyadmin.valueye.in/dashboard/preferences?subscribe=false&quot; class=&quot;footer-link&quot;>Unsubscribe</a>
+        </p>
+        <p class=&quot;footer-text&quot; style=&quot;color: #9ca3af; font-size: 10px;&quot;>
+            &copy; 2026 Valueye Technologies. All rights reserved.
+        </p>
+    </div>
+
+            </div>
+        </div>
+    </body>
+    </html>
+" sandbox="allow-same-origin"></iframe>
+            </div>
+        </div>
+
+        <div id="template-4" class="preview-section">
+            <div class="preview-header">5. Bill Generated</div>
+            <div class="preview-content">
+                <iframe srcdoc="
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <style>
+            
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; line-height: 1.5; color: #18181b; margin: 0; padding: 0; background-color: #f4f4f5; -webkit-font-smoothing: antialiased; }
+    .wrapper { padding: 32px 16px; }
+    .container { max-width: 380px; margin: 0 auto; padding: 24px; border-radius: 12px; background-color: #ffffff; border: 1px solid #e4e4e7; box-shadow: 0 4px 12px rgba(0,0,0,0.03); }
+    .header { margin-bottom: 24px; display: table; width: 100%; }
+    .logo { display: table-cell; font-size: 15px; font-weight: 700; color: #09090b; letter-spacing: -0.5px; vertical-align: middle; text-transform: uppercase; }
+    .badge-wrap { display: table-cell; text-align: right; vertical-align: middle; }
+    .badge { padding: 4px 8px; background-color: #f4f4f5; color: #52525b; border-radius: 4px; font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; }
+    .title { font-size: 18px; font-weight: 600; color: #09090b; margin: 0 0 6px 0; letter-spacing: -0.5px; }
+    .text { font-size: 13px; color: #52525b; margin-bottom: 20px; line-height: 1.5; }
+    .otp-box { background: #fafafa; border-radius: 8px; padding: 16px; text-align: center; margin-bottom: 20px; border: 1px dashed #d4d4d8; }
+    .otp-code { font-size: 24px; font-weight: 600; color: #09090b; letter-spacing: 6px; font-family: 'SF Mono', 'Roboto Mono', monospace; white-space: nowrap; margin-left: 6px; }
+    .validity { font-size: 11px; color: #71717a; margin-top: 6px; font-weight: 500; }
+    .button { display: block; box-sizing: border-box; padding: 12px 20px; background-color: #09090b; color: #ffffff !important; text-decoration: none; border-radius: 8px; font-weight: 500; font-size: 13px; text-align: center; margin-top: 8px; }
+    .info-box { background: #fafafa; border: 1px solid #e4e4e7; border-radius: 8px; padding: 16px; margin-bottom: 20px; }
+    .info-row { display: table; width: 100%; margin-bottom: 8px; font-size: 12px; }
+    .info-row:last-child { margin-bottom: 0; }
+    .info-label { display: table-cell; color: #71717a; text-align: left; }
+    .info-value { display: table-cell; color: #18181b; font-weight: 500; text-align: right; }
+    .footer { 
+        margin-top: 16px; 
+        padding: 40px 32px; 
+        background-color: #f9fafb; 
+        border-radius: 24px; 
+        text-align: center; 
+    }
+    .footer-text { font-size: 11px; color: #6b7280; margin: 0; line-height: 1.6; }
+    .footer-link { color: #111827; text-decoration: none; font-weight: 700; font-size: 11px; }
+
+            .bill-table { width: 100%; border-collapse: collapse; margin-bottom: 16px; }
+            .bill-th { text-align: left; font-size: 10px; color: #71717a; text-transform: uppercase; padding: 8px 0; border-bottom: 1px solid #e4e4e7; }
+            .bill-td { padding: 10px 0; border-bottom: 1px solid #f4f4f5; font-size: 12px; color: #18181b; }
+            .bill-amount { text-align: right; font-weight: 500; }
+            .total-row { display: table; width: 100%; font-size: 12px; margin-bottom: 6px; }
+            .total-label { display: table-cell; color: #71717a; }
+            .total-value { display: table-cell; text-align: right; font-weight: 500; color: #18181b; }
+            .total-final { margin-top: 8px; padding-top: 8px; border-top: 1px solid #e4e4e7; font-size: 14px; font-weight: 600; color: #09090b; }
+        </style>
+    </head>
+    <body>
+        <div class=&quot;wrapper&quot;>
+            <div class=&quot;container&quot;>
+                <div class=&quot;header&quot;>
+                    <div class=&quot;logo&quot;>Palm Beach Residency</div>
+                    <div class=&quot;badge-wrap&quot;><span class=&quot;badge&quot;>Invoice</span></div>
+                </div>
+                <h1 class=&quot;title&quot;>Statement</h1>
+                <p class=&quot;text&quot; style=&quot;font-size: 12px;&quot;>Ref: PBR/2024/001 &middot; Due: <strong>15 Jul 2024</strong></p>
+                
+                <div class=&quot;info-box&quot; style=&quot;padding: 12px 16px;&quot;>
+                    <div class=&quot;info-row&quot;><div class=&quot;info-label&quot;>To</div><div class=&quot;info-value&quot;>John Doe</div></div>
+                    <div class=&quot;info-row&quot;><div class=&quot;info-label&quot;>Flat</div><div class=&quot;info-value&quot;>A-101</div></div>
+                </div>
+
+                <table class=&quot;bill-table&quot;>
+                    <thead><tr><th class=&quot;bill-th&quot;>Description</th><th class=&quot;bill-th&quot; style=&quot;text-align: right;&quot;>Amount</th></tr></thead>
+                    <tbody>
+                        
+                            <tr>
+                                <td class=&quot;bill-td&quot;>Maintenance</td>
+                                <td class=&quot;bill-td bill-amount&quot;>₹4000.00</td>
+                            </tr>
+                        
+                            <tr>
+                                <td class=&quot;bill-td&quot;>Sinking Fund</td>
+                                <td class=&quot;bill-td bill-amount&quot;>₹500.00</td>
+                            </tr>
+                        
+                    </tbody>
+                </table>
+
+                <div style=&quot;background: #fafafa; padding: 16px; border-radius: 8px; margin-bottom: 24px;&quot;>
+                    <div class=&quot;total-row&quot;><div class=&quot;total-label&quot;>Subtotal</div><div class=&quot;total-value&quot;>₹4500.00</div></div>
+                    <div class=&quot;total-row&quot;><div class=&quot;total-label&quot;>Tax</div><div class=&quot;total-value&quot;>₹810.00</div></div>
+                    
+                    <div class=&quot;total-row total-final&quot;><div class=&quot;total-label&quot; style=&quot;color: #09090b;&quot;>Total Due</div><div class=&quot;total-value&quot;>₹5310.00</div></div>
+                </div>
+
+                <p class=&quot;text&quot; style=&quot;font-size: 11px; text-align: center; margin: 0;&quot;>Please pay by the due date to avoid late fees.</p>
+                
+    <div class=&quot;footer&quot;>
+        <p class=&quot;footer-text&quot; style=&quot;margin-bottom: 24px;&quot;>
+            Palm Beach Residency
+        </p>
+        <p class=&quot;footer-text&quot; style=&quot;margin-bottom: 8px;&quot;>
+            To update your communication settings or to unsubscribe, use the links below.
+        </p>
+        <p class=&quot;footer-text&quot; style=&quot;margin-bottom: 24px;&quot;>
+            <a href=&quot;https://societyadmin.valueye.in/dashboard/preferences?subscribe=true&quot; class=&quot;footer-link&quot;>Manage Preferences</a>
+            &nbsp;|&nbsp;
+            <a href=&quot;https://societyadmin.valueye.in/dashboard/preferences?subscribe=false&quot; class=&quot;footer-link&quot;>Unsubscribe</a>
+        </p>
+        <p class=&quot;footer-text&quot; style=&quot;color: #9ca3af; font-size: 10px;&quot;>
+            &copy; 2026 Valueye Technologies. All rights reserved.
+        </p>
+    </div>
+
+            </div>
+        </div>
+    </body>
+    </html>
+" sandbox="allow-same-origin"></iframe>
+            </div>
+        </div>
+
+        <div id="template-5" class="preview-section">
+            <div class="preview-header">6. Welcome to Conversational AI</div>
+            <div class="preview-content">
+                <iframe srcdoc="
+    <!DOCTYPE html>
+    <html>
+    <head><style>
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; line-height: 1.5; color: #18181b; margin: 0; padding: 0; background-color: #f4f4f5; -webkit-font-smoothing: antialiased; }
+    .wrapper { padding: 32px 16px; }
+    .container { max-width: 380px; margin: 0 auto; padding: 24px; border-radius: 12px; background-color: #ffffff; border: 1px solid #e4e4e7; box-shadow: 0 4px 12px rgba(0,0,0,0.03); }
+    .header { margin-bottom: 24px; display: table; width: 100%; }
+    .logo { display: table-cell; font-size: 15px; font-weight: 700; color: #09090b; letter-spacing: -0.5px; vertical-align: middle; text-transform: uppercase; }
+    .badge-wrap { display: table-cell; text-align: right; vertical-align: middle; }
+    .badge { padding: 4px 8px; background-color: #f4f4f5; color: #52525b; border-radius: 4px; font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; }
+    .title { font-size: 18px; font-weight: 600; color: #09090b; margin: 0 0 6px 0; letter-spacing: -0.5px; }
+    .text { font-size: 13px; color: #52525b; margin-bottom: 20px; line-height: 1.5; }
+    .otp-box { background: #fafafa; border-radius: 8px; padding: 16px; text-align: center; margin-bottom: 20px; border: 1px dashed #d4d4d8; }
+    .otp-code { font-size: 24px; font-weight: 600; color: #09090b; letter-spacing: 6px; font-family: 'SF Mono', 'Roboto Mono', monospace; white-space: nowrap; margin-left: 6px; }
+    .validity { font-size: 11px; color: #71717a; margin-top: 6px; font-weight: 500; }
+    .button { display: block; box-sizing: border-box; padding: 12px 20px; background-color: #09090b; color: #ffffff !important; text-decoration: none; border-radius: 8px; font-weight: 500; font-size: 13px; text-align: center; margin-top: 8px; }
+    .info-box { background: #fafafa; border: 1px solid #e4e4e7; border-radius: 8px; padding: 16px; margin-bottom: 20px; }
+    .info-row { display: table; width: 100%; margin-bottom: 8px; font-size: 12px; }
+    .info-row:last-child { margin-bottom: 0; }
+    .info-label { display: table-cell; color: #71717a; text-align: left; }
+    .info-value { display: table-cell; color: #18181b; font-weight: 500; text-align: right; }
+    .footer { 
+        margin-top: 16px; 
+        padding: 40px 32px; 
+        background-color: #f9fafb; 
+        border-radius: 24px; 
+        text-align: center; 
+    }
+    .footer-text { font-size: 11px; color: #6b7280; margin: 0; line-height: 1.6; }
+    .footer-link { color: #111827; text-decoration: none; font-weight: 700; font-size: 11px; }
+</style></head>
+    <body>
+        <div class=&quot;wrapper&quot;>
+            <div class=&quot;container&quot; style=&quot;text-align: center;&quot;>
+                <div class=&quot;logo&quot; style=&quot;margin-bottom: 24px; display: block; text-align: center;&quot;>Conversational AI</div>
+                <h1 class=&quot;title&quot; style=&quot;font-size: 20px;&quot;>Welcome to Conversational AI</h1>
+                <p class=&quot;text&quot;>Your workspace for <strong>Palm Beach Residency</strong> is ready to be configured.</p>
+                
+                <div class=&quot;info-box&quot; style=&quot;text-align: left; padding: 16px; margin: 24px 0;&quot;>
+                    <div style=&quot;margin-bottom: 12px;&quot;>
+                        <strong style=&quot;font-size: 13px; color: #09090b; display: block;&quot;>Finance Automation</strong>
+                        <span style=&quot;font-size: 12px; color: #71717a;&quot;>Seamless billing & tracking.</span>
+                    </div>
+                    <div>
+                        <strong style=&quot;font-size: 13px; color: #09090b; display: block;&quot;>Enterprise Security</strong>
+                        <span style=&quot;font-size: 12px; color: #71717a;&quot;>Next-generation data protocols.</span>
+                    </div>
+                </div>
+                
+                <a href=&quot;https://conversational-ai.valueye.in/onboard&quot; class=&quot;button&quot;>Launch Workspace</a>
+                
+    <div class=&quot;footer&quot;>
+        <p class=&quot;footer-text&quot; style=&quot;margin-bottom: 24px;&quot;>
+            Conversational AI
+        </p>
+        <p class=&quot;footer-text&quot; style=&quot;margin-bottom: 8px;&quot;>
+            To update your communication settings or to unsubscribe, use the links below.
+        </p>
+        <p class=&quot;footer-text&quot; style=&quot;margin-bottom: 24px;&quot;>
+            <a href=&quot;https://societyadmin.valueye.in/dashboard/preferences?subscribe=true&quot; class=&quot;footer-link&quot;>Manage Preferences</a>
+            &nbsp;|&nbsp;
+            <a href=&quot;https://societyadmin.valueye.in/dashboard/preferences?subscribe=false&quot; class=&quot;footer-link&quot;>Unsubscribe</a>
+        </p>
+        <p class=&quot;footer-text&quot; style=&quot;color: #9ca3af; font-size: 10px;&quot;>
+            &copy; 2026 Valueye Technologies. All rights reserved.
+        </p>
+    </div>
+
+            </div>
+        </div>
+    </body>
+    </html>
+" sandbox="allow-same-origin"></iframe>
+            </div>
+        </div>
+
+        <div id="template-6" class="preview-section">
+            <div class="preview-header">7. Onboarding Status</div>
+            <div class="preview-content">
+                <iframe srcdoc="
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <style>
+            
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; line-height: 1.5; color: #18181b; margin: 0; padding: 0; background-color: #f4f4f5; -webkit-font-smoothing: antialiased; }
+    .wrapper { padding: 32px 16px; }
+    .container { max-width: 380px; margin: 0 auto; padding: 24px; border-radius: 12px; background-color: #ffffff; border: 1px solid #e4e4e7; box-shadow: 0 4px 12px rgba(0,0,0,0.03); }
+    .header { margin-bottom: 24px; display: table; width: 100%; }
+    .logo { display: table-cell; font-size: 15px; font-weight: 700; color: #09090b; letter-spacing: -0.5px; vertical-align: middle; text-transform: uppercase; }
+    .badge-wrap { display: table-cell; text-align: right; vertical-align: middle; }
+    .badge { padding: 4px 8px; background-color: #f4f4f5; color: #52525b; border-radius: 4px; font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; }
+    .title { font-size: 18px; font-weight: 600; color: #09090b; margin: 0 0 6px 0; letter-spacing: -0.5px; }
+    .text { font-size: 13px; color: #52525b; margin-bottom: 20px; line-height: 1.5; }
+    .otp-box { background: #fafafa; border-radius: 8px; padding: 16px; text-align: center; margin-bottom: 20px; border: 1px dashed #d4d4d8; }
+    .otp-code { font-size: 24px; font-weight: 600; color: #09090b; letter-spacing: 6px; font-family: 'SF Mono', 'Roboto Mono', monospace; white-space: nowrap; margin-left: 6px; }
+    .validity { font-size: 11px; color: #71717a; margin-top: 6px; font-weight: 500; }
+    .button { display: block; box-sizing: border-box; padding: 12px 20px; background-color: #09090b; color: #ffffff !important; text-decoration: none; border-radius: 8px; font-weight: 500; font-size: 13px; text-align: center; margin-top: 8px; }
+    .info-box { background: #fafafa; border: 1px solid #e4e4e7; border-radius: 8px; padding: 16px; margin-bottom: 20px; }
+    .info-row { display: table; width: 100%; margin-bottom: 8px; font-size: 12px; }
+    .info-row:last-child { margin-bottom: 0; }
+    .info-label { display: table-cell; color: #71717a; text-align: left; }
+    .info-value { display: table-cell; color: #18181b; font-weight: 500; text-align: right; }
+    .footer { 
+        margin-top: 16px; 
+        padding: 40px 32px; 
+        background-color: #f9fafb; 
+        border-radius: 24px; 
+        text-align: center; 
+    }
+    .footer-text { font-size: 11px; color: #6b7280; margin: 0; line-height: 1.6; }
+    .footer-link { color: #111827; text-decoration: none; font-weight: 700; font-size: 11px; }
+
+            .timeline { margin: 20px 0 24px 8px; border-left: 2px solid #e4e4e7; padding-left: 16px; }
+            .timeline-item { position: relative; margin-bottom: 16px; display: table; width: 100%; }
+            .timeline-item:last-child { margin-bottom: 0; }
+            .dot { position: absolute; left: -21px; top: 4px; width: 8px; height: 8px; border-radius: 50%; border: 2px solid #fff; }
+            .dot.completed { background: #18181b; }
+            .dot.current { background: #ffffff; border-color: #18181b; box-shadow: 0 0 0 1px #18181b; }
+            .dot.pending { background: #e4e4e7; }
+            .step-info { display: table-cell; vertical-align: top; }
+            .step-name { font-size: 13px; font-weight: 500; color: #09090b; margin-bottom: 2px; }
+            .step-status { font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; }
+            .status-completed { color: #18181b; }
+            .status-current { color: #52525b; }
+            .status-pending { color: #a1a1aa; }
+        </style>
+    </head>
+    <body>
+        <div class=&quot;wrapper&quot;>
+            <div class=&quot;container&quot;>
+                <div class=&quot;header&quot;>
+                    <div class=&quot;logo&quot;>Conversational AI</div>
+                    <div class=&quot;badge-wrap&quot;><span class=&quot;badge&quot;>Deployment</span></div>
+                </div>
+                <h1 class=&quot;title&quot;>Sync Status</h1>
+                <p class=&quot;text&quot; style=&quot;margin-bottom: 8px;&quot;>Deployment progress for <strong>Palm Beach Residency</strong>.</p>
+                
+                <div class=&quot;timeline&quot;>
+                    
+                        <div class=&quot;timeline-item&quot;>
+                            <div class=&quot;dot completed&quot;></div>
+                            <div class=&quot;step-info&quot;>
+                                <div class=&quot;step-name&quot;>Initialization</div>
+                                <div class=&quot;step-status status-completed&quot;>completed</div>
+                            </div>
+                        </div>
+                    
+                        <div class=&quot;timeline-item&quot;>
+                            <div class=&quot;dot completed&quot;></div>
+                            <div class=&quot;step-info&quot;>
+                                <div class=&quot;step-name&quot;>Verification</div>
+                                <div class=&quot;step-status status-completed&quot;>completed</div>
+                            </div>
+                        </div>
+                    
+                        <div class=&quot;timeline-item&quot;>
+                            <div class=&quot;dot current&quot;></div>
+                            <div class=&quot;step-info&quot;>
+                                <div class=&quot;step-name&quot;>Asset Sync</div>
+                                <div class=&quot;step-status status-current&quot;>current</div>
+                            </div>
+                        </div>
+                    
+                        <div class=&quot;timeline-item&quot;>
+                            <div class=&quot;dot pending&quot;></div>
+                            <div class=&quot;step-info&quot;>
+                                <div class=&quot;step-name&quot;>Board Setup</div>
+                                <div class=&quot;step-status status-pending&quot;>pending</div>
+                            </div>
+                        </div>
+                    
+                        <div class=&quot;timeline-item&quot;>
+                            <div class=&quot;dot pending&quot;></div>
+                            <div class=&quot;step-info&quot;>
+                                <div class=&quot;step-name&quot;>Finance Config</div>
+                                <div class=&quot;step-status status-pending&quot;>pending</div>
+                            </div>
+                        </div>
+                    
+                        <div class=&quot;timeline-item&quot;>
+                            <div class=&quot;dot pending&quot;></div>
+                            <div class=&quot;step-info&quot;>
+                                <div class=&quot;step-name&quot;>Resident Data</div>
+                                <div class=&quot;step-status status-pending&quot;>pending</div>
+                            </div>
+                        </div>
+                    
+                        <div class=&quot;timeline-item&quot;>
+                            <div class=&quot;dot pending&quot;></div>
+                            <div class=&quot;step-info&quot;>
+                                <div class=&quot;step-name&quot;>Services</div>
+                                <div class=&quot;step-status status-pending&quot;>pending</div>
+                            </div>
+                        </div>
+                    
+                        <div class=&quot;timeline-item&quot;>
+                            <div class=&quot;dot pending&quot;></div>
+                            <div class=&quot;step-info&quot;>
+                                <div class=&quot;step-name&quot;>Launch</div>
+                                <div class=&quot;step-status status-pending&quot;>pending</div>
+                            </div>
+                        </div>
+                    
+                </div>
+                
+                <a href=&quot;https://conversational-ai.valueye.in/onboard&quot; class=&quot;button&quot;>Resume Deployment</a>
+                
+    <div class=&quot;footer&quot;>
+        <p class=&quot;footer-text&quot; style=&quot;margin-bottom: 24px;&quot;>
+            Conversational AI
+        </p>
+        <p class=&quot;footer-text&quot; style=&quot;margin-bottom: 8px;&quot;>
+            To update your communication settings or to unsubscribe, use the links below.
+        </p>
+        <p class=&quot;footer-text&quot; style=&quot;margin-bottom: 24px;&quot;>
+            <a href=&quot;https://societyadmin.valueye.in/dashboard/preferences?subscribe=true&quot; class=&quot;footer-link&quot;>Manage Preferences</a>
+            &nbsp;|&nbsp;
+            <a href=&quot;https://societyadmin.valueye.in/dashboard/preferences?subscribe=false&quot; class=&quot;footer-link&quot;>Unsubscribe</a>
+        </p>
+        <p class=&quot;footer-text&quot; style=&quot;color: #9ca3af; font-size: 10px;&quot;>
+            &copy; 2026 Valueye Technologies. All rights reserved.
+        </p>
+    </div>
+
+            </div>
+        </div>
+    </body>
+    </html>
+    " sandbox="allow-same-origin"></iframe>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>
