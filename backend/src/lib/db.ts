@@ -207,6 +207,66 @@ export async function initDatabase(retries = 5, delay = 1000): Promise<void> {
                 console.error("Non-critical seeding error for company_master:", companyErr);
             }
 
+            // Seed clean sidebar menu
+            try {
+                console.log("🌱 Seeding clean HRMS sidebar...");
+
+                // Clear old
+                await pool.query(`DELETE FROM menu_master`);
+
+                // Parent items
+                const { rows: dash } = await pool.query(`
+                  INSERT INTO menu_master (mm_name, mm_label, mm_parent_id, mm_access_type, mm_link, mm_icon, mm_order)
+                  VALUES ('dashboard', 'Dashboard', NULL, 'AD', '/dashboard', 'LayoutDashboard', 10)
+                  RETURNING mm_id
+                `);
+
+                const { rows: masters } = await pool.query(`
+                  INSERT INTO menu_master (mm_name, mm_label, mm_parent_id, mm_access_type, mm_link, mm_icon, mm_order)
+                  VALUES ('masters', 'Masters', NULL, 'AD', NULL, 'FolderOpen', 20)
+                  RETURNING mm_id
+                `);
+
+                const { rows: rep } = await pool.query(`
+                  INSERT INTO menu_master (mm_name, mm_label, mm_parent_id, mm_access_type, mm_link, mm_icon, mm_order)
+                  VALUES ('reports', 'Reports', NULL, 'AD', '/dashboard/reports', 'FileText', 30)
+                  RETURNING mm_id
+                `);
+
+                const { rows: admin } = await pool.query(`
+                  INSERT INTO menu_master (mm_name, mm_label, mm_parent_id, mm_access_type, mm_link, mm_icon, mm_order)
+                  VALUES ('admin-tools', 'Admin Tools', NULL, 'AD', NULL, 'Shield', 40)
+                  RETURNING mm_id
+                `);
+
+                const { rows: set } = await pool.query(`
+                  INSERT INTO menu_master (mm_name, mm_label, mm_parent_id, mm_access_type, mm_link, mm_icon, mm_order)
+                  VALUES ('settings', 'Settings', NULL, 'AD', '/dashboard/settings', 'Settings', 50)
+                  RETURNING mm_id
+                `);
+
+                const mastersId = masters[0].mm_id;
+                const adminId = admin[0].mm_id;
+
+                // Children under Masters
+                await pool.query(`
+                  INSERT INTO menu_master (mm_name, mm_label, mm_parent_id, mm_access_type, mm_link, mm_icon, mm_order) VALUES 
+                  ('company-master', 'Company Master', $1, 'AD', '/dashboard/registers/company-master', 'Building2', 1),
+                  ('employee-master', 'Employee Master', $1, 'AD', '/dashboard/registers/employee-master', 'Users', 2)
+                `, [mastersId]);
+
+                // Children under Admin Tools
+                await pool.query(`
+                  INSERT INTO menu_master (mm_name, mm_label, mm_parent_id, mm_access_type, mm_link, mm_icon, mm_order) VALUES 
+                  ('user-roles', 'User Roles', $1, 'AD', '/dashboard/admin-tools/user-roles', 'UserCog', 1),
+                  ('login-credentials', 'Login Credentials', $1, 'AD', '/dashboard/registers/login-credentials', 'Key', 2)
+                `, [adminId]);
+
+                console.log("✅ Clean sidebar menu seeded successfully!");
+            } catch (menuErr) {
+                console.error("Non-critical seeding error for menu_master:", menuErr);
+            }
+
             console.log("✅ Database schema verified (users, error_logs, and hostname_styles tables exist)");
             return;
         } catch (err: any) {

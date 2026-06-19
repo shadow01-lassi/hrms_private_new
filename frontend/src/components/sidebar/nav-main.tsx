@@ -36,6 +36,9 @@ export function NavMain({ sidebar }: { sidebar: SidebarItemsType[] }) {
 
     // Helper to check if a specific item is active
     const isItemActive = (item: MenuItemType, parentPath = "") => {
+        if (item.mm_link && item.mm_link.trim() !== '') {
+            return matchPath({ path: item.mm_link, end: true }, location.pathname);
+        }
         const currentItemPath = `${parentPath.toLowerCase()}/${item.mm_name.toLowerCase()}`.replace(/\/+/g, "/");
         const fullPath = (APP_SIDEBAR_PARENT_LINK + currentItemPath).replace(/\/+/g, "/");
         return matchPath({ path: fullPath, end: true }, location.pathname);
@@ -75,6 +78,9 @@ export function NavMain({ sidebar }: { sidebar: SidebarItemsType[] }) {
 
     const renderItemContent = (item: MenuItemType, currentPath: string, isActive: boolean, isSub: boolean) => {
         const Button = isSub ? SidebarMenuSubButton : SidebarMenuButton;
+        const targetPath = item.mm_link && item.mm_link.trim() !== '' 
+            ? item.mm_link 
+            : APP_SIDEBAR_PARENT_LINK + currentPath;
 
         return (
             <Button asChild isActive={isActive}
@@ -85,7 +91,7 @@ export function NavMain({ sidebar }: { sidebar: SidebarItemsType[] }) {
             >
                 <Link
                     to={{
-                        pathname: APP_SIDEBAR_PARENT_LINK + currentPath,
+                        pathname: targetPath,
                         search: location.search,
                         hash: location.hash,
                     }}
