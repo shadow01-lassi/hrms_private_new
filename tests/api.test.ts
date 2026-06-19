@@ -65,8 +65,8 @@ vi.mock("idb", () => ({
     }))
 }));
 
-// Mock offlineDB — intercept both the alias and the direct relative path
-vi.mock("@/components/native/offlineDB", () => ({
+// Hoisted mock variables allowed by Vitest (prefixed with 'mock')
+const mockOfflineDB = {
     checkCacheVersion: vi.fn(() => Promise.resolve()),
     clearAllStores: vi.fn(() => Promise.resolve()),
     enqueueMutation: vi.fn(() => Promise.resolve()),
@@ -77,10 +77,9 @@ vi.mock("@/components/native/offlineDB", () => ({
     saveSyncData: vi.fn(() => Promise.resolve()),
     deleteSyncData: vi.fn(() => Promise.resolve()),
     getAllSyncData: vi.fn(() => Promise.resolve([]))
-}));
+};
 
-// Mock Zustand network store
-vi.mock("@/components/store/networkStore", () => ({
+const mockNetworkStore = {
     useNetworkStore: {
         getState: () => ({
             isOnline: true,
@@ -90,10 +89,9 @@ vi.mock("@/components/store/networkStore", () => ({
             setOnline: vi.fn()
         })
     }
-}));
+};
 
-// Mock storage module to prevent real IndexedDB/localStorage access
-vi.mock("@/lib/storage", () => ({
+const mockStorage = {
     getFromStorage: vi.fn((key: string) => {
         if (key === "session") return "dummytoken";
         if (key === "company") return 1;
@@ -102,19 +100,37 @@ vi.mock("@/lib/storage", () => ({
     putIntoStorage: vi.fn(),
     deleteFromStorage: vi.fn(),
     initPersistentStorage: vi.fn(() => Promise.resolve())
-}));
+};
 
-// Mock auth module
-vi.mock("@/lib/authentication", () => ({
+const mockAuthentication = {
     logout: vi.fn(() => Promise.resolve()),
     getSession: vi.fn(() => Promise.resolve(null)),
     decryptSession: vi.fn(() => Promise.resolve(null))
-}));
+};
 
-// Mock updateStore
-vi.mock("@/components/store/updateStore", () => ({
+const mockUpdateStore = {
     triggerForcedUpdate: vi.fn()
-}));
+};
+
+// Mock offlineDB — intercept both alias and relative paths
+vi.mock("@/components/native/offlineDB", () => mockOfflineDB);
+vi.mock("../frontend/src/components/native/offlineDB", () => mockOfflineDB);
+
+// Mock Zustand network store — intercept both alias and relative paths
+vi.mock("@/components/store/networkStore", () => mockNetworkStore);
+vi.mock("../frontend/src/components/store/networkStore", () => mockNetworkStore);
+
+// Mock storage module — intercept both alias and relative paths
+vi.mock("@/lib/storage", () => mockStorage);
+vi.mock("../frontend/src/lib/storage", () => mockStorage);
+
+// Mock auth module — intercept both alias and relative paths
+vi.mock("@/lib/authentication", () => mockAuthentication);
+vi.mock("../frontend/src/lib/authentication", () => mockAuthentication);
+
+// Mock updateStore — intercept both alias and relative paths
+vi.mock("@/components/store/updateStore", () => mockUpdateStore);
+vi.mock("../frontend/src/components/store/updateStore", () => mockUpdateStore);
 
 // Mock CryptoJS (used by encryption.ts) 
 vi.mock("crypto-js", () => ({

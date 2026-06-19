@@ -31,12 +31,12 @@ export async function onboardlogout() {
 
 export async function decryptSession() {
     try {
-        try {
-            const session: string = getFromStorage("session") as string;
-            if (!session) {
-                return null;
-            }
+        const session: string = getFromStorage("session") as string;
+        if (!session || typeof session !== "string" || session.split(".").length !== 3) {
+            return null;
+        }
 
+        try {
             const result: { payload: SessionUserType } = await jwtVerify(session, key, {
                 algorithms: ["HS256"],
             });
@@ -45,12 +45,13 @@ export async function decryptSession() {
                 user: result.payload
             };
         } catch (error) {
-            console.error("Invalid session token", error);
+            console.error("Invalid session token verification failed:", error);
+            deleteFromStorage("session");
             return null;
         }
     } catch (error) {
         console.log("Error in authentication :: decryptSession() :: ", error);
-        return null
+        return null;
     }
 }
 

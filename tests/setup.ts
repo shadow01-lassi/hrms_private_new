@@ -118,13 +118,13 @@ Object.defineProperty(globalThis, "window", {
 // on every handle created during tests, so module-level intervals (e.g. the
 // heartbeat in api.ts) never prevent the test runner from exiting.
 // ---------------------------------------------------------------------------
-const _origSetInterval = globalThis.setInterval;
-globalThis.setInterval = ((...args: Parameters<typeof setInterval>) => {
-    const handle = _origSetInterval(...args);
-    if (handle && typeof (handle as any).unref === "function") {
-        (handle as any).unref();
-    }
-    return handle;
-}) as typeof setInterval;
+// Mock setInterval to be a no-op to prevent module-level recurring timers (like heartbeats) from hanging Vitest
+globalThis.setInterval = vi.fn().mockImplementation(() => {
+    return {
+        unref: () => {},
+        ref: () => {},
+        [Symbol.toPrimitive]: () => 0
+    } as any;
+}) as any;
 
 console.log("[vitest-setup] Browser globals stubbed.");

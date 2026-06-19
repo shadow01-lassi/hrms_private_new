@@ -11,8 +11,8 @@ types.setTypeParser(1082, (stringValue) => {
     return stringValue;
 });
 
-// Configure SSL based on DB_SSL or default NODE_ENV
-const isSslEnabled = process.env.DB_SSL === "true" || (!process.env.DB_SSL && process.env.NODE_ENV === "production");
+// Configure SSL based on DB_SSL or default NODE_ENV, or if connecting to AWS RDS
+const isSslEnabled = process.env.DB_SSL === "true" || (!process.env.DB_SSL && process.env.NODE_ENV === "production") || (process.env.DB_HOST && process.env.DB_HOST.includes("rds.amazonaws.com"));
 const sslConfig = isSslEnabled ? { rejectUnauthorized: false } : undefined;
 
 const poolMax = process.env.DB_POOL_MAX ? Number(process.env.DB_POOL_MAX) : 10;
@@ -180,6 +180,33 @@ export async function initDatabase(retries = 5, delay = 1000): Promise<void> {
                     hs_last_updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
                 );
             `);
+            // Seed a default admin user if none exists
+            const userCheck = await pool.query("SELECT 1 FROM users LIMIT 1");
+            if (userCheck.rows.length === 0) {
+                console.log("🌱 Seeding default admin user...");
+                const bcrypt = require("bcryptjs");
+                const hash = bcrypt.hashSync("admin123", 10);
+                await pool.query(`
+                    INSERT INTO users (name, email, mobile, password_hash, role)
+                    VALUES ($1, $2, $3, $4, $5)
+                    ON CONFLICT DO NOTHING
+                `, ["Admin User", "admin@valueye.in", "9876543210", hash, "Admin"]);
+            }
+
+            // Seed a default company if none exists
+            try {
+                const companyCheck = await pool.query("SELECT 1 FROM company_master LIMIT 1");
+                if (companyCheck.rows.length === 0) {
+                    console.log("🌱 Seeding default company...");
+                    await pool.query(`
+                        INSERT INTO company_master (cm_name, cm_code, cm_registration_no, cm_status, cm_create_by)
+                        VALUES ($1, $2, $3, $4, $5)
+                    `, ["Valueye Solutions", "VS001", "REG123456", true, "admin"]);
+                }
+            } catch (companyErr) {
+                console.error("Non-critical seeding error for company_master:", companyErr);
+            }
+
             console.log("✅ Database schema verified (users, error_logs, and hostname_styles tables exist)");
             return;
         } catch (err: any) {

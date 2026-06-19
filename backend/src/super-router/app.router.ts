@@ -84,4 +84,19 @@ appRouter.use("/master", verifyToken, masterRouter);
 appRouter.use("/upload", verifyToken, uploadRouter);
 appRouter.use("/dashboard", verifyToken, dashboardRouter);
 
+appRouter.get("/accounts/fin-year", verifyToken, (req, res) => {
+    return res.status(200).json({
+        type: "success",
+        data: [
+            {
+                fy_id: 1,
+                fy_code: "2025-2026",
+                fy_start_date: "2025-04-01",
+                fy_end_date: "2026-03-31",
+                fy_remarks: "Mock Fin Year"
+            }
+        ]
+    });
+});
+
 export default appRouter;

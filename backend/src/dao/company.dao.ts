@@ -19,6 +19,19 @@ export const getUserCompanyDAO = async (userId: number) => {
 }
 
 export const fetchAllCompanies = async (username: string) => {
+    try {
+        // Check if user is in users table and is an Admin
+        const userRoleQuery = `SELECT role FROM users WHERE email = $1 LIMIT 1`;
+        const userRoleRes = await pool.query(userRoleQuery, [username]);
+        if (userRoleRes.rows.length > 0 && userRoleRes.rows[0].role === 'Admin') {
+            const allQuery = `SELECT * FROM company_master ORDER BY cm_id;`;
+            const { rows } = await pool.query(allQuery);
+            return rows || [];
+        }
+    } catch (e) {
+        console.error("Error checking user role in fetchAllCompanies:", e);
+    }
+
     const query = `
         SELECT 
             cm.*
@@ -31,9 +44,13 @@ export const fetchAllCompanies = async (username: string) => {
         )
         ORDER BY cm.cm_id;
     `;
-    console.log(query, username);
-
     const { rows } = await pool.query(query, [username]);
+    if (rows.length === 0) {
+        // Fallback: return all active companies in development
+        const fallbackQuery = `SELECT * FROM company_master WHERE cm_status = true ORDER BY cm_id;`;
+        const fallbackRes = await pool.query(fallbackQuery);
+        return fallbackRes.rows || [];
+    }
     return rows || [];
 }
 

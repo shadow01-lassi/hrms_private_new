@@ -26,8 +26,8 @@ export const getAllEmployeesDAO = async () => {
           em.em_status,
           em.em_created_by,
           em.em_created_at,
-          em.em_last_editted_by,
-          em.em_last_editted_at,
+          em.em_update_by AS em_last_editted_by,
+          em.em_update_date AS em_last_editted_at,
           cm.cm_name AS company_name
         FROM employee_master em
         LEFT JOIN company_master cm ON cm.cm_id = em.em_cm_id
@@ -161,8 +161,8 @@ export const updateEmployeeDAO = async (id: number, data: {
           em_designation = $17,
           em_company = $18,
           em_status = $19,
-          em_last_editted_by = $20,
-          em_last_editted_at = NOW()
+          em_update_by = $20,
+          em_update_date = NOW()
         WHERE em_id = $21
         RETURNING *;
     `;
@@ -197,8 +197,8 @@ export const updateEmployeeStatusDAO = async (id: number, status: boolean, updat
         UPDATE employee_master
         SET
           em_status = $1,
-          em_last_editted_by = $2,
-          em_last_editted_at = NOW()
+          em_update_by = $2,
+          em_update_date = NOW()
         WHERE em_id = $3
         RETURNING *;
     `;
