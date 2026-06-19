@@ -63,10 +63,6 @@ export default function CompanyMasterPage() {
 
     return (
         <div className="space-y-6">
-            <div className="flex justify-between items-center">
-                <h1 className="heading">Company Master</h1>
-            </div>
-
             <JSONNewDataTable
                 getData={{
                     api: "/master/company-master",
